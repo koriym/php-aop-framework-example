@@ -1,6 +1,6 @@
 <?php
 
-class Foo implements FooInterface
+class Foo
 {
     public function intercepting()
     {
