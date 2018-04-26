@@ -1,0 +1,8 @@
+{
+    "require": {
+        "ray/aop": "^2.7"
+    },
+    "autoload": {
+         "classmap": ["src/"]
+    }
+}
