@@ -38,13 +38,3 @@ no_intercepting: {
     // should be same with native_call
     echo sprintf('%-16s%.8f[μs]', 'no_intercepting', microtime(true) - $t) . PHP_EOL;
 }
-
-native: {
-    $foo = new Foo;
-    $t = microtime(true);
-    for ($i = 0; $i < $max; $i++) {
-        $foo->original();
-    }
-    // should be same with native_call
-    echo sprintf('%-16s%.8f[μs]', 'native', microtime(true) - $t) . PHP_EOL;
-}
