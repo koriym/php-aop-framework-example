@@ -5,7 +5,7 @@ require __DIR__ . '/vendor/autoload.php'; // use composer
 $tmpDir = __DIR__ . '/tmp';
 $max = 1000 * 1000;
 
-compile: {
+initialize: {
     $t = microtime(true);
     // Initialize an application aspect container
     $applicationAspectKernel = ApplicationAspectKernel::getInstance();
@@ -18,7 +18,7 @@ compile: {
             __DIR__ . '/src'
         ]
     ]);
-    echo sprintf('%-16s%.8f[μs]', 'compile', (microtime(true) - $t) * 1000 * 1000) . PHP_EOL;
+    echo sprintf('%-16s%.8f[μs]', 'initialize', (microtime(true) - $t) * 1000 * 1000) . PHP_EOL;
 }
 
 intercepting: {
